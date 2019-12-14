@@ -31,11 +31,13 @@ class CategoryViewController: SwipeTableViewController {
             navBarAppearance.configureWithOpaqueBackground()
             navBarAppearance.backgroundColor = UIColor.systemTeal
             navBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+            navBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
             navBar.standardAppearance = navBarAppearance
             navBar.scrollEdgeAppearance = navBarAppearance
         } else {
             navBar.backgroundColor = UIColor(hexString: "1D9BF6")
             navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+            navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         }
     }
     

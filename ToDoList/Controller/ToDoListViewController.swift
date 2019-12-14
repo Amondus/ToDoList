@@ -52,11 +52,12 @@ class TodoListViewController: SwipeTableViewController {
                     navBarAppearance.configureWithOpaqueBackground()
                     navBarAppearance.backgroundColor = navBarColor
                     navBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(navBarColor, returnFlat: true)]
+                    navBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(navBarColor, returnFlat: true)]
                     navBar.standardAppearance = navBarAppearance
                     navBar.scrollEdgeAppearance = navBarAppearance
                 } else {
                     navBar.backgroundColor = navBarColor
-                    navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(navBarColor, returnFlat: true)]
+                    navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(navBarColor, returnFlat: true)]
                 }
                 
             }
@@ -81,9 +82,11 @@ class TodoListViewController: SwipeTableViewController {
                 
                 cell.backgroundColor = color
                 cell.textLabel?.textColor = ContrastColorOf(color, returnFlat: true)
+                cell.tintColor = ContrastColorOf(color, returnFlat: true)
             }
             
             cell.accessoryType = item.done ? .checkmark : .none
+            
         } else {
             cell.textLabel?.text = "No Items Added"
         }
